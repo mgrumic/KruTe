@@ -13,6 +13,8 @@ export LIBS:=
 export VOLUME_INC=$(CURDIR)/inc/volume
 export OPERATION_INC=$(CURDIR)/inc/operation
 export INC=$(CURDIR)/lib/inc $(VOLUME_INC) $(OPERATION_INC)
+export FORCE_INC=$(CURDIR)/inc/force
+export INC=$(CURDIR)/lib/inc $(VOLUME_INC) $(FORCE_INC)
 .PHONY: all
 all: $(BUILD_DIR)/$(APP)
 
