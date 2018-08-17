@@ -3,12 +3,17 @@
 #include <time.h>
 #include "mul.h"
 #include "volume.h"
+#include "force.h"
 
 int main(void) {
 	double cube_len = 2.12;
 	double sphere_r = 7.71;
 	double cube_len_err = 0.0;
 	double sphere_r_err = -0.2;
+	double mass = 70.0;
+	double acc = 1.5;
+	double mass_err = -70.0;
+	double acc_neg = -1.5;
 	double res = 0;
 	int err = 0;
 	
@@ -22,6 +27,14 @@ int main(void) {
 	printf("Sphere volume [r: %lf] = %lf\n", sphere_r, res);
 	res = sphere_volume(sphere_r_err);
 	printf("Sphere volume [a: %lf] = %lf\n", sphere_r_err, res);
+	printf("==========================================\n");
+	
+	res = force_magnitude(mass, acc);
+	printf("Force magnitude [m: %lf, a: %lf] = %lf\n", mass, acc, res);
+	res = force_magnitude(mass, acc_neg);
+	printf("Force magnitude [m: %lf, a: %lf] = %lf\n", mass, acc_neg, res);
+	res = force_magnitude(mass_err, acc);
+	printf("Force magnitude [m: %lf, a: %lf] = %lf\n", mass_err, acc, res);
 	printf("==========================================\n");
 	
 	printf("MUL test:");

@@ -11,7 +11,8 @@ export CFLAGS=
 export OBJS:=
 export LIBS:=
 export VOLUME_INC=$(CURDIR)/inc/volume
-export INC=$(CURDIR)/lib/inc $(VOLUME_INC)
+export FORCE_INC=$(shell PWD)/inc/force
+export INC=$(shell PWD)/lib/inc $(VOLUME_INC) $(FORCE_INC)
 .PHONY: all
 all: $(BUILD_DIR)/$(APP)
 

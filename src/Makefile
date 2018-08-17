@@ -1,12 +1,16 @@
 APP_OBJ=$(BUILD_DIR)/main
 VOLUME_OBJ=$(BUILD_DIR)/volume.o
 VOLUME=volume
+FORCE_OBJ=$(BUILD_DIR)/force.o
+FORCE=force
 MUL_LIB=mul
 OBJS+=$(VOLUME_OBJ)
+OBJS+=$(FORCE_OBJ)
 LIBS+=$(MUL_LIB)
 	
 
 .PHONY: $(APP)
 $(APP):
 	$(MAKE) $(VOLUME_OBJ) -C $(VOLUME)
+	$(MAKE) $(FORCE_OBJ) -C $(FORCE)
 	$(MAKE) $(APP_OBJ) -C $(APP)
