@@ -3,6 +3,7 @@
 #include <time.h>
 #include "mul.h"
 #include "volume.h"
+#include "operation.h"
 
 int main(void) {
 	double cube_len = 2.12;
@@ -11,6 +12,10 @@ int main(void) {
 	double sphere_r_err = -0.2;
 	double res = 0;
 	int err = 0;
+	
+	printf("Double of 3 is: %f \n", double_value(3));
+	printf("Negative of 3 is: %f \n", invert(3));
+	printf("==========================================\n");
 	
 	res = cube_volume(cube_len);
 	printf("Cube volume [a: %lf] = %lf\n", cube_len, res);
