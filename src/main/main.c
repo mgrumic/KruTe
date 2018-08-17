@@ -17,7 +17,7 @@ int main(void) {
 	double acc_neg = -1.5;
 	double res = 0;
 	int err = 0;
-	
+
 	printf("Double of 3 is: %f \n", double_value(3));
 	printf("Negative of 3 is: %f \n", invert(3));
 	printf("==========================================\n");

@@ -14,11 +14,15 @@ MUL_LIB=mul
 OBJS+=$(FORCE_OBJ)
 
 LIBS+=$(MUL_LIB)
-	
+
+SUB_OBJ=$(BUILD_DIR)/sub.o
+SUB=sub
+OBJS+=$(SUB_OBJ)
 
 .PHONY: $(APP)
 $(APP):
 	$(MAKE) $(VOLUME_OBJ) -C $(VOLUME)
 	$(MAKE) $(OPERATION_OBJ) -C $(OPERATION)
 	$(MAKE) $(FORCE_OBJ) -C $(FORCE)
+	$(MAKE) $(SUB_OBJ) -C $(SUB)
 	$(MAKE) $(APP_OBJ) -C $(APP)

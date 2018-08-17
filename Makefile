@@ -11,13 +11,14 @@ export CFLAGS=
 export OBJS:=
 export LIBS:=
 export VOLUME_INC=$(CURDIR)/inc/volume
+export SUB_INC=$(CURDIR)/inc/sub
 export OPERATION_INC=$(CURDIR)/inc/operation
 export INC=$(CURDIR)/lib/inc $(VOLUME_INC) $(OPERATION_INC) $(FORCE_INC)
 export FORCE_INC=$(CURDIR)/inc/force
 .PHONY: all
 all: $(BUILD_DIR)/$(APP)
 
-
+.PHONY: $(BUILD_DIR)/$(APP)
 $(BUILD_DIR)/$(APP):
 	@$(ECHO) "Starting build"
 	@$(ECHO) "$(BUILD_DIR)"
