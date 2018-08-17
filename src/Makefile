@@ -2,18 +2,17 @@ APP_OBJ=$(BUILD_DIR)/main
 VOLUME_OBJ=$(BUILD_DIR)/volume.o
 OPERATION_OBJ=$(BUILD_DIR)/operation.o
 VOLUME=volume
-<<<<<<< HEAD
+
 OPERATION=operation
 MUL_LIB=mul
 OBJS+=$(VOLUME_OBJ)
 OBJS+=$(OPERATION_OBJ)
-=======
+
 FORCE_OBJ=$(BUILD_DIR)/force.o
 FORCE=force
 MUL_LIB=mul
-OBJS+=$(VOLUME_OBJ)
 OBJS+=$(FORCE_OBJ)
->>>>>>> 7bbbebda2bea724b758827abdcca873585f194d0
+
 LIBS+=$(MUL_LIB)
 	
 
