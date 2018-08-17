@@ -1,0 +1,12 @@
+APP_OBJ=$(BUILD_DIR)/main
+VOLUME_OBJ=$(BUILD_DIR)/volume.o
+VOLUME=volume
+MUL_LIB=mul
+OBJS+=$(VOLUME_OBJ)
+LIBS+=$(MUL_LIB)
+	
+
+.PHONY: $(APP)
+$(APP):
+	$(MAKE) $(VOLUME_OBJ) -C $(VOLUME)
+	$(MAKE) $(APP_OBJ) -C $(APP)
