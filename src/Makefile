@@ -5,15 +5,18 @@ VOLUME=volume
 
 OPERATION=operation
 MUL_LIB=mul
+DIV_LIB=div
 OBJS+=$(VOLUME_OBJ)
 OBJS+=$(OPERATION_OBJ)
 
 FORCE_OBJ=$(BUILD_DIR)/force.o
 FORCE=force
 MUL_LIB=mul
+DIV_LIB=div
 OBJS+=$(FORCE_OBJ)
 
 LIBS+=$(MUL_LIB)
+LIBS+=$(DIV_LIB)
 
 SUB_OBJ=$(BUILD_DIR)/sub.o
 SUB=sub

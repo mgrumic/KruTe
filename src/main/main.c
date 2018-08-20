@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "mul.h"
+#include "div.h"
 #include "volume.h"
 #include "operation.h"
 #include "force.h"
@@ -55,6 +56,24 @@ int main(void) {
 			printf("\nError in sqrt_s function: paramn-> %lf %lf 0x%p\n", a, b, &res);
 			break;
 		}
+	}
+	printf("\n==========================================\n");
+	printf("DIV test:");
+	res = 0.0;
+	float a = 10.0;
+	float b = 5.0;
+	if (0 == divide(a, b, &res)) {
+		printf("\n%lf / %lf = %lf", a, b, res);
+	} else {
+		err = 1;
+		printf("\nError in function: paramn-> %lf %lf 0x%p\n", a, b, &res);
+	}
+	b = 0;
+	if (0 == divide(a, b, &res)) {
+		printf("\n%lf / %lf = %lf", a, b, res);
+	} else {
+		err = 1;
+		printf("\nError in function: paramn-> %lf %lf 0x%p\n", a, b, &res);
 	}
 	
 	return err;
